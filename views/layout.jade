@@ -1,0 +1,22 @@
+doctype 5
+html
+  head
+    title= title
+    link(rel='stylesheet', href='http://yui.yahooapis.com/pure/0.2.1/base-min.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet", href="http://yui.yahooapis.com/pure/0.2.1/grids-min.css")
+    script
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-20500052-2']);
+      _gaq.push(['_addDevId', 'i9k95']); // Google Analyticator App ID with Google 
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+  body.yui3-normalized
+    block content
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    script(src='/socket.io/socket.io.js')
+    script(src='/javascripts/app.js')

@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  header.pure-g
+    div.pure-u-1
+      h1= title
+      p Welcome to #{title}.
+  section#name-widget.pure-g
+    div#name.pure-u-1-2
+      input#nickname(placeholder="What's your name?")
+      a#join.pure-button.pure-button-primary Join chat
+  section#messages-widget.pure-g.hidden
+    div#input.pure-u-1-2
+      input#sendMessage(placeholder='Send message')
+      a#send.pure-button.pure-button-primary.pure-button-disabled Send
+  section.pure-g
+    div#messages-wrapper.pure-u-1
+      div.pure-g
+        div.pure-u-1-3
+          h3 Chat log
+          .right You
+          ul#messages
+        div.pure-u-1-3
+          h2 Control board
+          div#users
+  footer
+    | &copy; zlayer.net
+
+

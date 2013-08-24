@@ -33,6 +33,7 @@ if ('development' == app.get('env')) {
 
 app.get('/', routes.index);
 app.get('/users', user.list);
+app.get('/channel.html', routes.channel);
 
 var server = http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
@@ -53,7 +54,7 @@ io.sockets.on('connection', function(socket) {
       socket.broadcast.to('chat').emit('message', {message: data.message, nick: nick});
       console.log(io.sockets.clients().length);
       console.log(io.sockets.clients('chat').length);
-      console.log(io.sockets.clients()[0]);
+      console.log(io.sockets.clients()[0].nick);
     });
   });
 });

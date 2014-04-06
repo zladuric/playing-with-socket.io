@@ -38,11 +38,7 @@ ul li {
 }
 .red {
   color: red;
-  text-align: right;
 }
 #messages li {
   clear: both;
-}
-fb:login-button {
-  line-height: 2em;
 }

@@ -64,7 +64,7 @@
         var message = messages.value;
         this.socket.emit('message', {message: message});
         messages.value = '';
-        this.appendMsg(message, 'red');
+        this.appendMsg('Me: ' + message, 'red');
       }
     }
     app.init();
